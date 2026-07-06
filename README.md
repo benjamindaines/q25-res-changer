@@ -13,30 +13,6 @@ A Kotlin/Compose Android app to quickly change the device display resolution. ~~
 - Compose UI with editable custom resolutions
 - Per-app resolution switching.
 
-## Requirements
-| Capability | Purpose |
-|------------|---------|
-| ~~Shizuku (recommended) | Run `wm size` without spawning a root shell~~ |
-| ~~Root (fallback) | Alternative method if Shizuku not ready~~ |
-| WRITE_SECURE_SETTINGS / system uid (~~optional)~~ | Runs as a signatre platform app on BenOS |
-
- ~~You need either a running Shizuku service (with granted permission) or a rooted device.~~
-
- ~~## Shizuku Setup~~
-~~1. Install the Shizuku app from its official source.~~
-~~2. Start Shizuku (ADB or root start depending on device).~~
-~~3. Launch Resolution Changer – it will request Shizuku permission.~~
-~~4. After granting, a snackbar will indicate Shizuku is active.~~
-
- ~~If Shizuku dies, the app will disable Shizuku usage until the binder returns.~~
-
- ~~## Root Fallback~~
-~~If Shizuku cannot be used, the app executes:~~
-```
-su -c wm size <WIDTH>x<HEIGHT>
-```
-~~Make sure your root solution (Magisk/SU) grants permission.~~
-
 ## Shortcuts & Actions
 The app defines static shortcuts (see `res/xml/shortcuts.xml`):
 - Toggle resolution (cycles through presets)
